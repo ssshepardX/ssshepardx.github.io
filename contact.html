@@ -1,76 +1,77 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İletişim | Furkan Çoban</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-container {
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .contact-container h2 {
-      margin-bottom: 20px;
-      color: #00bcd4;
-    }
-
-    .contact-container p {
-      margin: 10px 0;
-      color: #bbb;
-    }
-
-    .social-links a {
-      display: inline-block;
-      margin: 10px;
-      font-size: 20px;
-      padding: 10px 20px;
-      border-radius: 5px;
-      background: #1e1e1e;
-      color: #00bcd4;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .social-links a:hover {
-      background: #00bcd4;
-      color: #fff;
-      transform: translateY(-3px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Furkan Çoban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="about.html">Hakkımda</a>
-      <a href="projects.html">Projeler</a>
-      <a href="blog.html">Yazılar</a>
-      <a href="contact.html">İletişim</a>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="highlight">F</span>urkan Çoban
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+                <a href="about.html"><i class="fas fa-user"></i> Hakkında</a>
+                <a href="projects.html"><i class="fas fa-code"></i> Projeler</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Yazılar</a>
+                <a href="contact.html" class="active"><i class="fas fa-envelope"></i> İletişim</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- İletişim Bölümü -->
-  <section class="contact-container">
-    <h2>Benimle İletişime Geç</h2>
-    <p>Her zaman mesaj atabilirsin 👇</p>
+    <main class="container">
+        <section class="contact-section">
+            <div class="card contact-card">
+                <h1>İletişime Geç</h1>
+                <p class="section-desc">Projeler, iş birlikleri veya herhangi bir konu için benimle iletişime geçebilirsin.</p>
 
-    <p>📧 <a href="mailto:seninmailin@gmail.com">furkancobanbusiness@gmail.com</a></p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:furkancobanbusiness@gmail.com">furkancobanbusiness@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>İstanbul, Türkiye</span>
+                    </div>
+                </div>
 
-    <div class="social-links">
-      <a href="https://github.com/ssshepardX" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/furkancoban1337" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/cofurkan" target="_blank">Instagram</a>
-    </div>
-  </section>
+                <div class="social-links">
+                    <a href="https://github.com/ssshepardX" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/furkancoban1337" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/cofurkan" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Furkan Çoban | <a href="mailto:seninmailin@gmail.com">Mail Gönder</a></p>
-  </footer>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Furkan Çoban</p>
+                <div class="footer-links">
+                    <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> Mail Gönder</a>
+                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> CV İndir</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projelerim | Furkan Çoban</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Kart Stili */
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .project-card {
-      background: #1e1e1e;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      background: #242424;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      color: #00bcd4;
-    }
-
-    .project-card p {
-      color: #bbb;
-    }
-
-    .project-card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #fff;
-      background: #00bcd4;
-      padding: 8px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .project-card a:hover {
-      background: #0097a7;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | Furkan Çoban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="about.html">Hakkımda</a>
-      <a href="projects.html">Projeler</a>
-      <a href="blog.html">Yazılar</a>
-      <a href="contact.html">İletişim</a>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="highlight">F</span>urkan Çoban
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+                <a href="about.html"><i class="fas fa-user"></i> Hakkında</a>
+                <a href="projects.html" class="active"><i class="fas fa-code"></i> Projeler</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Yazılar</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> İletişim</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Başlık -->
-  <header>
-    <h1>Projelerim</h1>
-    <p>Üzerinde çalıştığım bazı projeler 👇</p>
-  </header>
+    <main class="container">
+        <section class="projects-section">
+            <h1>Projelerim</h1>
+            <p class="section-desc">Geliştirdiğim bazı projeler ve çalışmalar.</p>
+            
+            <div class="projects-grid">
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-code project-icon"></i>
+                        <h3>Web Projesi</h3>
+                    </div>
+                    <p>Modern ve responsive bir web uygulaması. React ve Node.js kullanılarak geliştirildi.</p>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="btn" target="_blank"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    </div>
+                </div>
 
-  <!-- Proje Kartları -->
-  <section class="projects-container">
-    <div class="project-card">
-      <h3>🌐 Kişisel Website</h3>
-      <p>HTML, CSS ve GitHub Pages kullanarak kişisel bir website geliştirdim :P .</p>
-      <a href="https://cobanfurkan.dev" target="_blank">Siteyi Gör</a>
-    </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-robot project-icon"></i>
+                        <h3>AI Projesi</h3>
+                    </div>
+                    <p>Yapay zeka tabanlı bir görüntü işleme uygulaması. Python ve TensorFlow kullanıldı.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="btn" target="_blank"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    </div>
+                </div>
 
-    <div class="project-card">
-      <h3>7/24 Welness Tracker ( prototype,school project made with old tech; java swing :) )</h3>
-      <p>Dönem sonu okul projem. API kullanımını keşfetmek güzeldi.</p>
-      <a href="https://github.com/ssshepardX" target="_blank">GitHub Repo</a>
-    </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fas fa-mobile-alt project-icon"></i>
+                        <h3>Mobil Uygulama</h3>
+                    </div>
+                    <p>Cross-platform mobil uygulama. Flutter framework'ü ile geliştirildi.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        <a href="#" class="btn" target="_blank"><i class="fab fa-github"></i> Kaynak Kod</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="project-card">
-      <h3>📊 Kripto Analiz Aracı (in progress)</h3>
-      <p>Python ile yazılmış, basit teknik analiz göstergeleri kullanan bir proje.</p>
-      <a href="https://github.com/ssshepardX" target="_blank">GitHub Repo</a>
-    </div>
-  </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Furkan Çoban</p>
+                <div class="footer-links">
+                    <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> Mail Gönder</a>
+                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> CV İndir</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Furkan Çoban | <a href="mailto:furkancobanbusiness@gmail.com">Mail Gönder</a></p>
-  </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
