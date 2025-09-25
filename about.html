@@ -3,47 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hakkımda | Furkan Çoban</title>
+  <title>Hakkında</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="about.html">Hakkımda</a>
-      <a href="projects.html">Projeler</a>
-      <a href="blog.html">Yazılar</a>
-      <a href="contact.html">İletişim</a>
-    </div>
+  <nav>
+    <div class="logo">Benim Sitem</div>
+    <button class="menu-toggle">☰</button>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html" class="active">Hakkında</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
   </nav>
 
-  <!-- Hakkımda Bölümü -->
-  <header>
-    <h1>Hakkımda</h1>
-    <p>Ben Furkan Çoban, bilgisayar mühendisliği öğrencisiyim. Yazılım geliştirmeyi, oyun programlamayı ve teknolojiyle ilgili yeni şeyler öğrenmeyi seviyorum.  
-    Hedefim; yaratıcı projeler üretmek ve insanlara fayda sağlayacak yazılımlar geliştirmek.</p>
-  </header>
+  <div class="container">
+    <h1>Hakkında</h1>
+    <p>Bu siteyi öğrenme, deneme ve kendimi geliştirme amacıyla yapıyorum.</p>
+    <p>Amacım modern, şık ve mobil uyumlu web siteleri geliştirmeyi öğrenmek.</p>
+    <p>Burada hem tasarım hem de kodlama konularında kendimi geliştirmeyi hedefliyorum.</p>
+  </div>
 
-  <section style="max-width: 800px; margin: auto; padding: 20px; text-align: left;">
-    <h2>🎓 Eğitim</h2>
-    <p>Zonguldak Bülent Ecevit Üniversitesi - Bilgisayar Mühendisliği</p>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
 
-    <h2>💻 İlgi Alanlarım</h2>
-    <ul>
-      <li>Oyun Geliştirme</li>
-      <li>Yapay Zeka ve Makine Öğrenmesi</li>
-      <li>Web ve Mobil Uygulama Geliştirme</li>
-      <li>Fitness ve Futbol</li>
-    </ul>
-
-    <h2>🚀 Hedeflerim</h2>
-    <p>Kendi projelerimi geliştirip paylaşmak, sektörde deneyim kazanmak ve ileride uluslararası bir şirkette developer olarak çalışmak istiyorum.</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Furkan Çoban | <a href="mailto:seninmailin@gmail.com">Mail Gönder</a></p>
-  </footer>
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
