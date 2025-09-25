@@ -1,0 +1,79 @@
+/* Genel ayarlar */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* koyu arka plan */
+  color: #e0e0e0; /* açık gri yazı */
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+.navbar a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00bcd4; /* hover efekti mavi */
+}
+
+/* Header */
+header {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+}
+
+/* Butonlar */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #00bcd4;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+  background: #1e1e1e;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
