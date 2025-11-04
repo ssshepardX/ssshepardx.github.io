@@ -1,99 +1,110 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yazılar | Furkan Çoban</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Blog listesi */
-    .blog-container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .blog-post {
-      background: #1e1e1e;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .blog-post:hover {
-      transform: translateY(-4px);
-      background: #242424;
-    }
-
-    .blog-post h2 {
-      margin-top: 0;
-      color: #00bcd4;
-    }
-
-    .blog-post p {
-      color: #bbb;
-    }
-
-    .blog-post a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #fff;
-      background: #00bcd4;
-      padding: 8px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .blog-post a:hover {
-      background: #0097a7;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazılar | Furkan Çoban</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Blog listesi */
+        .blog-container {
+          max-width: 900px;
+          margin: 40px auto;
+          padding: 0 20px;
+        }
+    
+        .blog-post {
+          background: #1e1e1e;
+          border-radius: 10px;
+          padding: 20px;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+          transition: transform 0.3s ease, background 0.3s ease;
+        }
+    
+        .blog-post:hover {
+          transform: translateY(-4px);
+          background: #242424;
+        }
+    
+        .blog-post h2 {
+          margin-top: 0;
+          color: #00bcd4;
+        }
+    
+        .blog-post p {
+          color: #bbb;
+        }
+    
+        .blog-post a {
+          display: inline-block;
+          margin-top: 10px;
+          color: #fff;
+          background: #00bcd4;
+          padding: 8px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: background 0.3s ease;
+        }
+    
+        .blog-post a:hover {
+          background: #0097a7;
+        }
+      </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html">Ana Sayfa</a>
-      <a href="about.html">Hakkımda</a>
-      <a href="projects.html">Projeler</a>
-      <a href="blog.html">Yazılar</a>
-      <a href="contact.html">İletişim</a>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="highlight">F</span>urkan Çoban
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
+                <a href="about.html"><i class="fas fa-user"></i> Hakkında</a>
+                <a href="projects.html"><i class="fas fa-code"></i> Projeler</a>
+                <a href="blog.html" class="active"><i class="fas fa-blog"></i> Yazılar</a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> İletişim</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Başlık -->
-  <header>
-    <h1>Yazılarım</h1>
-    <p>Kendi yazılarım, notlarım ve deneyimlerim 👇</p>
-  </header>
+    <main class="container">
+        <section class="blog-section">
+            <h1>Son Yazılarım</h1>
+            
+            <div class="blog-grid">
+                <article class="card blog-card">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date">4 Kasım 2023</span>
+                            <span class="tag">Yapay Zeka</span>
+                        </div>
+                        <h2>Machine Learning ile Görüntü İşleme</h2>
+                        <p>OpenCV ve TensorFlow kullanarak görüntü işleme uygulamaları geliştirme deneyimlerim...</p>
+                        <a href="#" class="read-more">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
-  <!-- Yazılar -->
-  <section class="blog-container">
-    <div class="blog-post">
-      <h2>🚀 Bilgisayar Mühendisliği Yolculuğum</h2>
-      <p>Üniversiteye girişim, ilk öğrendiğim programlama dilleri ve karşılaştığım zorluklar hakkında.</p>
-      <a href="#">Devamını Oku</a>
-    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Furkan Çoban</p>
+                <div class="footer-links">
+                    <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> Mail Gönder</a>
+                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> CV İndir</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <div class="blog-post">
-      <h2>AI ile no-code app yapımı</h2>
-      <p>AI agentların api'lerini kullanarak neredeyse no-code app yapımı fikri her ne kadar kulağa hoş gelsede eğer amatörseniz uygulamanız çok vulnurability içerebilir.</p>
-      <a href="#">Devamını Oku</a>
-    </div>
-
-    <div class="blog-post">
-      <h2>📊 Kripto piyasası ve Yazılımın Kesişimi</h2>
-      <p>Kripto piyasaları için yazılım geliştirme üzerine kendi deneyimlerim.</p>
-      <a href="#">Devamını Oku</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Furkan Çoban | <a href="mailto:furkancobanbusiness@gmail.com">Mail Gönder</a></p>
-  </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
