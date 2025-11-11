@@ -27,7 +27,8 @@ body {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 90px;
+    min-height: calc(100vh - 90px);
 }
 
 .container {
@@ -47,6 +48,9 @@ main {
     top: 0;
     z-index: 1000;
     box-shadow: var(--shadow);
+    height: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .container {
@@ -306,7 +310,12 @@ footer {
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        padding: 1rem;
+        padding: 0.8rem 0;
+        height: 60px;
+    }
+
+    main {
+        padding-top: 70px;
     }
 
     .menu-toggle {
