@@ -27,8 +27,8 @@ body {
 }
 
 main {
-    padding-top: 90px;
-    min-height: calc(100vh - 90px);
+    padding-top: 120px;
+    min-height: calc(100vh - 120px);
 }
 
 .container {
@@ -121,6 +121,7 @@ main {
     gap: 2rem;
     margin: 2rem 0 3rem;
     align-items: start;
+    padding-top: 2rem;
 }
 
 .profile-info {
@@ -315,7 +316,7 @@ footer {
     }
 
     main {
-        padding-top: 70px;
+        padding-top: 85px;
     }
 
     .menu-toggle {
@@ -473,8 +474,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 80px);
-    padding: 2rem 0;
+    min-height: calc(100vh - 120px);
+    padding: 3rem 0;
 }
 
 .hero-section .card {
@@ -529,6 +530,12 @@ footer {
 
 .projects-section {
     margin-top: 0;
+    padding-top: 2rem;
+}
+
+.projects-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .section-desc {
@@ -599,7 +606,7 @@ footer {
     margin-top: 0;
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
 }
 
 .contact-card {
@@ -666,7 +673,7 @@ footer {
 /* Blog Page Styles */
 .blog-section {
     margin-top: 0;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem 2rem;
 }
 
 .blog-section h1 {
