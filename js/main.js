@@ -47,4 +47,62 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         }
     });
+
+    // CV Modal Functionality
+    const cvBtn = document.getElementById('cvBtn');
+    const cvModal = document.getElementById('cvModal');
+    const cvModalClose = document.querySelector('.cv-modal-close');
+    const cvDownloadBtn = document.getElementById('cvDownloadBtn');
+    const cvCloseBtn = document.getElementById('cvCloseBtn');
+
+    if (cvBtn && cvModal) {
+        // Open CV modal
+        cvBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            cvModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close CV modal
+        function closeCVModal() {
+            cvModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close button click
+        if (cvModalClose) {
+            cvModalClose.addEventListener('click', closeCVModal);
+        }
+
+        // Close button text click
+        if (cvCloseBtn) {
+            cvCloseBtn.addEventListener('click', closeCVModal);
+        }
+
+        // Download button
+        if (cvDownloadBtn) {
+            cvDownloadBtn.addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.href = 'assets/furkancobanCV.jpg';
+                link.download = 'Furkan_Coban_CV.jpg';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', function(e) {
+            if (e.target === cvModal) {
+                closeCVModal();
+            }
+        });
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && cvModal.style.display === 'block') {
+                closeCVModal();
+            }
+        });
+    }
 });

@@ -6,7 +6,7 @@
     <title>Hakkında | Furkan Çoban</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=3.0">
 </head>
 <body>
     <nav class="navbar">
@@ -67,11 +67,25 @@
                 <p>© 2025 Furkan Çoban</p>
                 <div class="footer-links">
                     <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> Mail Gönder</a>
-                    <a href="#"><i class="fas fa-file-alt"></i> CV İndir</a>
+                    <a href="#" id="cvBtn"><i class="fas fa-file-alt"></i> CV İndir</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- CV Modal -->
+    <div id="cvModal" class="cv-modal">
+        <div class="cv-modal-content">
+            <span class="cv-modal-close">&times;</span>
+            <div class="cv-preview">
+                <img src="assets/furkancobanCV.jpg" alt="Furkan Çoban CV" class="cv-image">
+            </div>
+            <div class="cv-actions">
+                <button id="cvDownloadBtn" class="btn"><i class="fas fa-download"></i> İndir</button>
+                <button id="cvCloseBtn" class="btn btn-secondary"><i class="fas fa-times"></i> Kapat</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
