@@ -158,7 +158,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    perspective: 1000px;
 }
 
 .profile-image img {
@@ -167,11 +166,12 @@ main {
     border-radius: 50%;
     object-fit: cover;
     border: 8px solid;
-    border-image: linear-gradient(135deg, var(--primary), var(--secondary)) 1;
+    border-color: var(--primary);
     box-shadow: 
-        0 0 0 6px var(--darker),
-        0 10px 40px rgba(124, 58, 237, 0.6),
-        inset 0 0 20px rgba(124, 58, 237, 0.2);
+        0 0 0 3px var(--darker),
+        0 0 0 8px var(--secondary),
+        0 0 40px rgba(124, 58, 237, 0.6),
+        inset 0 0 20px rgba(124, 58, 237, 0.15);
     transition: var(--transition);
     position: relative;
     z-index: 1;
@@ -183,7 +183,7 @@ main {
     width: 290px;
     height: 290px;
     border-radius: 50%;
-    background: var(--gradient);
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
     opacity: 0.1;
     animation: pulse 3s ease-in-out infinite;
     z-index: 0;
@@ -202,7 +202,12 @@ main {
 
 .profile-image img:hover {
     transform: scale(1.08);
-    filter: brightness(1.1);
+    filter: brightness(1.15);
+    box-shadow: 
+        0 0 0 3px var(--darker),
+        0 0 0 8px var(--secondary),
+        0 0 60px rgba(124, 58, 237, 0.8),
+        inset 0 0 20px rgba(124, 58, 237, 0.25);
 }
 
 .card {
