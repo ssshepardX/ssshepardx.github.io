@@ -6,9 +6,14 @@
     <title>Yazılar | Furkan Çoban</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=3.0">
+    <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
+    <div class="lang-switcher" id="langSwitcher">
+        <button id="lang-tr" class="lang-btn active">TR</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+    </div>
+
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
@@ -18,28 +23,26 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div class="nav-links">
-                <a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a>
-                <a href="about.html"><i class="fas fa-user"></i> Hakkında</a>
-                <a href="projects.html"><i class="fas fa-code"></i> Projeler</a>
-                <a href="blog.html" class="active"><i class="fas fa-blog"></i> Yazılar</a>
-                <a href="contact.html"><i class="fas fa-envelope"></i> İletişim</a>
+                <a href="index.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Ana Sayfa</span></a>
+                <a href="about.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">Hakkında</span></a>
+                <a href="projects.html"><i class="fas fa-code"></i> <span data-i18n="nav.projects">Projeler</span></a>
+                <a href="blog.html" class="active"><i class="fas fa-blog"></i> <span data-i18n="nav.blog">Yazılar</span></a>
+                <a href="contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">İletişim</span></a>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <section class="blog-section">
-            <h1>Yazılar</h1>
-            <p class="section-desc">Teknoloji, yazılım ve kişisel gelişim üzerine paylaşımlar.</p>
+            <h1 data-i18n="blog.title">Yazılar</h1>
+            <p class="section-desc" data-i18n="blog.desc">Teknoloji, yazılım ve kişisel gelişim üzerine paylaşımlar.</p>
             <div class="blog-list">
-                <!-- Örnek gerçek bir yazı -->
                 <article class="card blog-card">
-                    <h2>Yapay Zeka ile Görüntü İşleme</h2>
+                    <h2 data-i18n="blog.post1.title">Yapay Zeka ile Görüntü İşleme</h2>
                     <p class="blog-meta"><i class="fas fa-calendar-alt"></i> 04.11.2025</p>
-                    <p>Yapay zeka ve bilgisayarla görme teknolojilerinin günümüzdeki uygulamaları ve Python ile örnek bir proje...</p>
-                    <a href="#" class="btn">Devamını Oku</a>
+                    <p data-i18n="blog.post1.content">Yapay zeka ve bilgisayarla görme teknolojilerinin günümüzdeki uygulamaları ve Python ile örnek bir proje...</p>
+                    <a href="#" class="btn" data-i18n="blog.post1.btn">Devamını Oku</a>
                 </article>
-                <!-- Yeni yazılarınızı buraya ekleyin. Boş template bırakmayın. -->
             </div>
         </section>
     </main>
@@ -49,8 +52,8 @@
             <div class="footer-content">
                 <p>© 2025 Furkan Çoban</p>
                 <div class="footer-links">
-                    <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> Mail Gönder</a>
-                    <a href="#" id="cvBtn"><i class="fas fa-file-alt"></i> CV İndir</a>
+                    <a href="mailto:furkancobanbusiness@gmail.com"><i class="fas fa-envelope"></i> <span data-i18n="footer.mail">Mail Gönder</span></a>
+                    <a href="#" id="cvBtn"><i class="fas fa-file-alt"></i> <span data-i18n="footer.cv">CV İndir</span></a>
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/ssshepardX" target="_blank"><i class="fab fa-github"></i></a>
@@ -69,12 +72,13 @@
                 <img src="assets/furkancobanCV.jpg" alt="Furkan Çoban CV" class="cv-image">
             </div>
             <div class="cv-actions">
-                <button id="cvDownloadBtn" class="btn"><i class="fas fa-download"></i> İndir</button>
-                <button id="cvCloseBtn" class="btn btn-secondary"><i class="fas fa-times"></i> Kapat</button>
+                <button id="cvDownloadBtn" class="btn"><i class="fas fa-download"></i> <span data-i18n="cv.download">İndir</span></button>
+                <button id="cvCloseBtn" class="btn btn-secondary"><i class="fas fa-times"></i> <span data-i18n="cv.close">Kapat</span></button>
             </div>
         </div>
     </div>
 
+    <script src="js/lang.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
