@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cvDownloadBtn) {
             cvDownloadBtn.addEventListener('click', function() {
                 const link = document.createElement('a');
-                link.href = 'assets/furkancobanCV.jpg';
-                link.download = 'Furkan_Coban_CV.jpg';
+                link.href = 'assets/furkancobanCV.png';
+                link.download = 'Furkan_Coban_CV.png';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

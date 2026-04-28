@@ -884,3 +884,167 @@ footer {
         padding: 5px 10px;
     }
 }
+
+/* Enhanced Animations & Effects */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.card {
+    animation: slideInUp 0.5s ease-out;
+}
+
+/* Enhanced Contact Section */
+.contact-section .card {
+    border: 2px solid rgba(124, 58, 237, 0.2);
+}
+
+.contact-section .card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.3);
+}
+
+.contact-item {
+    border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.contact-item:hover {
+    border-color: var(--primary);
+    box-shadow: inset 0 0 15px rgba(124, 58, 237, 0.1);
+}
+
+/* Enhanced Social Links */
+.social-links a {
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+
+/* Enhanced Skills Section */
+.skill-tags {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.tag {
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.3s ease;
+}
+
+.tag:hover::before {
+    left: 100%;
+}
+
+/* Button Enhancements */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Profile Image Enhanced */
+.profile-image img {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Project Card Enhancements */
+.project-card {
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--primary);
+}
+
+.project-icon {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Blog Card Enhancements */
+.blog-card {
+    border: 2px solid rgba(124, 58, 237, 0.1);
+}
+
+.blog-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+}
+
+/* Gradient Text Effects */
+.hero-section h1 {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+}
+
+/* Navbar Active Link Enhancement */
+.nav-links a.active {
+    background: rgba(124, 58, 237, 0.15);
+    border-radius: 8px;
+}
+
+/* Footer Enhancement */
+footer {
+    border-top: 2px solid rgba(124, 58, 237, 0.2);
+}
+
+footer:hover {
+    border-top-color: var(--primary);
+}
