@@ -1,5 +1,5 @@
 # Personal Website
-i think its mandatory ( still ).
+portfolio its mandatory.
 
 
 
