@@ -18,7 +18,7 @@ const translations = {
         "about.title": "Hakkımda",
         "about.bio1": "Merhaba! Ben Furkan Çoban, bir bilgisayar mühendisliği öğrencisiyim.",
         "about.bio2": "Yapay zeka implementasyonu ve otomasyonu konularında kendimi geliştirmeye çalışıyorum.",
-        "about.bio3": "Şu anda Almanya'da öğretimime devam etmekteyim.",
+        "about.bio3": "Şu anda Almanya'da eğitimime devam etmekteyim.",
         "about.skills": "Daha önce çalıştığım teknolojiler&diller",
 
         // Projects page

@@ -308,6 +308,39 @@ footer {
     color: var(--primary);
 }
 
+/* CV Download Button Enhancement */
+#cvBtn {
+    background: var(--gradient);
+    color: var(--light) !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+#cvBtn:hover {
+    box-shadow: 0 6px 25px rgba(124, 58, 237, 0.6);
+    transform: translateY(-2px);
+}
+
+#cvBtn i {
+    font-size: 1rem;
+}
+
+#cvDownloadBtn {
+    background: var(--gradient);
+    transition: var(--transition);
+}
+
+#cvDownloadBtn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.6);
+}
+
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     .navbar {
@@ -507,11 +540,23 @@ footer {
 .cv-preview {
     margin-bottom: 2rem;
     text-align: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cv-image {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+.cv-pdf {
+    width: 100%;
+    height: 100%;
+    border: none;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
 }

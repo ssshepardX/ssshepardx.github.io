@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Download button
         if (cvDownloadBtn) {
-            cvDownloadBtn.addEventListener('click', function() {
+            cvDownloadBtn.addEventListener('click', function(e) {
+                e.preventDefault();
                 const link = document.createElement('a');
-                link.href = 'assets/furkancobanCV.png';
-                link.download = 'Furkan_Coban_CV.png';
+                link.href = 'assets/LatestCV_FurkanCoban.pdf';
+                link.download = 'Furkan_Coban_CV.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
