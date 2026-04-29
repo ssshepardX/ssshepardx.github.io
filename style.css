@@ -42,21 +42,23 @@ main {
 .navbar {
     background: rgba(18, 18, 18, 0.95);
     backdrop-filter: blur(10px);
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
     box-shadow: var(--shadow);
-    height: 70px;
+    height: auto;
     display: flex;
     align-items: center;
+    min-height: 70px;
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -67,6 +69,9 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 150px;
 }
 
 .logo .highlight {
@@ -82,6 +87,16 @@ main {
     cursor: pointer;
     color: var(--light);
     transition: var(--transition);
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    min-width: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -344,37 +359,56 @@ footer {
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0.6rem 0;
-        height: 60px;
+        padding: 0.5rem 0;
+        min-height: 60px;
+        height: auto;
+        z-index: 999;
+    }
+
+    .navbar .container {
+        padding: 0 12px;
     }
 
     main {
         padding-top: 75px;
     }
 
+    .logo {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: auto;
+    }
+
     .menu-toggle {
-        display: block;
-        font-size: 1.5rem;
+        display: flex !important;
+        font-size: 1.3rem;
         cursor: pointer;
         color: var(--light);
         transition: var(--transition);
         z-index: 1000;
-        padding: 0.5rem;
+        background: none;
+        border: none;
+        padding: 0.4rem;
         min-width: 44px;
         min-height: 44px;
-        display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
     }
 
     .menu-toggle:hover {
         color: var(--primary);
     }
 
+    .menu-toggle:active {
+        transform: scale(0.95);
+    }
+
     .nav-links {
-        display: none;
+        display: none !important;
         position: fixed;
-        top: 0;
+        top: 60px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -383,48 +417,62 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        padding: 80px 1.5rem 2rem;
+        padding: 0;
         gap: 0;
-        z-index: 999;
+        z-index: 998;
         overflow-y: auto;
+        margin: 0;
+        width: 100%;
     }
 
     .nav-links.active {
-        display: flex;
-        animation: fadeIn 0.3s ease-out;
+        display: flex !important;
+        animation: slideDown 0.3s ease-out;
     }
 
-    @keyframes fadeIn {
+    @keyframes slideDown {
         from {
             opacity: 0;
+            transform: translateY(-20px);
         }
         to {
             opacity: 1;
+            transform: translateY(0);
         }
     }
 
     .nav-links a {
-        font-size: 1.1rem;
-        padding: 1rem;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
         width: 100%;
         text-align: left;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        min-height: 44px;
+        min-height: 48px;
         display: flex;
         align-items: center;
         gap: 1rem;
+        color: var(--light);
+        text-decoration: none;
+        transition: var(--transition);
+        border-left: 4px solid transparent;
     }
 
     .nav-links a::after {
-        display: none;
+        display: none !important;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:hover {
         background: rgba(124, 58, 237, 0.15);
         color: var(--light);
-        border-left: 4px solid var(--primary);
-        padding-left: calc(1rem - 4px);
+        border-left-color: var(--primary);
+        padding-left: calc(1.5rem - 4px);
+    }
+
+    .nav-links a.active {
+        background: rgba(124, 58, 237, 0.2);
+        color: var(--light);
+        border-left-color: var(--primary);
+        padding-left: calc(1.5rem - 4px);
     }
 
     .profile-section {
@@ -475,13 +523,20 @@ footer {
 
     .btn {
         width: 100%;
-        padding: 0.7rem 1.2rem;
+        padding: 0.8rem 1.2rem;
         font-size: 0.95rem;
         min-height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
     }
 
     .projects-grid {
@@ -563,10 +618,6 @@ footer {
 
     .container {
         padding: 0 15px;
-    }
-
-    .logo {
-        font-size: 1.2rem;
     }
 }
 
@@ -685,7 +736,127 @@ footer {
     }
 }
 
+/* Extra Small Devices (Below 480px) */
 @media (max-width: 480px) {
+    .navbar {
+        min-height: 55px;
+        padding: 0.4rem 0;
+    }
+
+    .navbar .container {
+        padding: 0 10px;
+    }
+
+    main {
+        padding-top: 65px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        font-size: 1.2rem;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0.3rem;
+    }
+
+    .nav-links {
+        top: 55px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.2rem;
+        min-height: 44px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-section .card {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .profile-section {
+        gap: 1rem;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+        border-width: 5px;
+    }
+
+    .profile-image::before {
+        width: 180px;
+        height: 180px;
+    }
+
+    .projects-section h1,
+    .blog-section h1,
+    .contact-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .section-desc {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .blog-card {
+        padding: 1rem;
+    }
+
+    .blog-card h2 {
+        font-size: 1.1rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+        min-height: 80px;
+    }
+
+    .tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .skill-tags {
+        gap: 0.4rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+
+    .project-icon {
+        font-size: 1.2rem;
+    }
+
+    .social-links {
+        gap: 0.8rem;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
+        padding: 0.4rem;
+    }
+
     .cv-modal-content {
         width: 98%;
         padding: 1rem;
@@ -1096,9 +1267,9 @@ footer {
 /* Language Switcher */
 .lang-switcher {
     position: fixed;
-    top: 18px;
-    right: 24px;
-    z-index: 1100;
+    top: 12px;
+    right: 12px;
+    z-index: 1050;
     display: flex;
     align-items: center;
     gap: 0;
@@ -1107,6 +1278,7 @@ footer {
     padding: 3px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
+    pointer-events: auto;
 }
 
 .lang-btn {
@@ -1121,6 +1293,11 @@ footer {
     cursor: pointer;
     transition: var(--transition);
     letter-spacing: 0.5px;
+    min-height: 32px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lang-btn:hover {
@@ -1136,13 +1313,17 @@ footer {
 
 @media (max-width: 768px) {
     .lang-switcher {
-        top: 14px;
-        right: 60px;
+        top: 8px;
+        right: 12px;
+        z-index: 1001;
+        padding: 2px;
     }
 
     .lang-btn {
-        font-size: 0.75rem;
-        padding: 5px 10px;
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        min-height: 28px;
+        min-width: 36px;
     }
 }
 
