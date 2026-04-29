@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const navLinksAnchors = document.querySelectorAll('.nav-links a');
 
+    // Prevent double-tap zoom on interactive elements
+    document.addEventListener('touchend', function(e) {
+        if (e.target.closest('a, button, .btn')) {
+            e.preventDefault();
+        }
+    }, false);
+
     // Toggle menu when hamburger icon is clicked
     if (menuToggle) {
         menuToggle.addEventListener('click', function(e) {
@@ -14,6 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 document.body.style.overflow = 'auto';
             }
+        });
+
+        // Improve touch responsiveness
+        menuToggle.addEventListener('touchstart', function(e) {
+            this.style.opacity = '0.7';
+        });
+        
+        menuToggle.addEventListener('touchend', function(e) {
+            this.style.opacity = '1';
         });
     }
 
@@ -106,4 +122,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Optimize images for mobile
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+    });
+
+    // Add passive event listeners for better scroll performance
+    let touchStartX = 0;
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function(e) {
+        // Only prevent default for specific elements
+        if (e.target.closest('nav') || e.target.closest('.cv-modal')) {
+            // Allow normal scrolling behavior
+        }
+    }, { passive: true });
 });
